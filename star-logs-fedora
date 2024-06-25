@@ -85,8 +85,8 @@ printf "%s\n" "${green}✔"
 
 printf "%-35s %s" "${normal}Package sources:"
 mkdir -p "$log_dir/repo"
-for f in /etc/yum/yum.repos.d/*.repo; do
-	cat "$f"						&> "$log_dir/repo/$(echo $f | cut -d '/' -f5)"
+for f in /etc/yum.repos.d/*.repo; do
+	cat "$f"						&> "$log_dir/repo/$(echo $f | cut -d '/' -f4)"
 done
 printf "%s\n" "${green}✔"
 
